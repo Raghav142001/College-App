@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>login</title>
+</head>
+
+<body class="background">
+<div class=main>
+<div class="login">
+
+<form name="form">
+<br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<b style="color:#242215;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;E-mail &nbsp;: <input type="text" size="20.5" name="email"/></b>
+<br/>
+<b style="color:#242215;">&nbsp;Password : <input type="password" name="password"/></b>
+<br/>
+<div class=button>
+<center>
+<button style="color:#242215;" onclick="validateform()";>login</button>
+</center>
+</form>
+
+</div>
+</div>
+</div>
+</body> 
+
+
+<style>
+.background{
+background-image: linear-gradient(rgba(0,0,0,0.85),rgba(0,0,0,0.85)),url(bg1.png);
+background-size:cover;
+background-position:center;
+font-size:27px;}
+
+.login{
+background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(https://www.ramaiah-india.org/wp-content/uploads/2017/05/Ramaiah-gallery-01.jpg);
+background-size:cover;
+background-position:center;
+width: 270px;
+height:250px;
+padding:0px 50px 75px 100px;
+margin:15px;
+font-size:20px;
+font-color:blue;
+border-style:solid;
+border-color:#242215;
+border-width:4px;
+border-radius:10px;}
+
+.main{
+padding:120px 300px 500px 440px;}
+
+.button{
+padding-left:75px;
+</style>
+ 
+<script type="text/javascript">
+
+function validateform(){
+var email=document.form.email.value;
+var password=document.form.password.value;
+
+if(email=="" || password==""){
+alert("email and password should not be empty");
+return false;
+}
+else if(password.length<4){
+alert("password should contain atleast four characters");
+return false;
+}else{
+alert("you have logged in successfully")
+}
+
+}
+</script>
+</html>
