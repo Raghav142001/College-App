@@ -56,11 +56,12 @@ padding:120px 300px 500px 440px;}
 padding-left:75px;
 </style>
  
-<script type="text/javascript">
+<script type="text/javascript" language="javascript">
 
 function validateform(){
 var email=document.form.email.value;
 var password=document.form.password.value;
+var regx = /^[a-z]+@[a-z]+\.com$/;
 
 if(email=="" || password==""){
 alert("email and password should not be empty");
@@ -69,8 +70,12 @@ return false;
 else if(password.length<4){
 alert("password should contain atleast four characters");
 return false;
+}else if(regx.test(email))
+{
+alert("you have logged in successfully");
+
 }else{
-alert("you have logged in successfully")
+alert("the format of email is invalid");
 }
 
 }
